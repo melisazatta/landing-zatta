@@ -1,0 +1,9 @@
+body{
+    background-color: #ece5ce;
+}
+h1{
+    justify-content: center;
+    display: flex;
+    padding-top: 3rem;
+    color: #774f38;
+}

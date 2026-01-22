@@ -1,0 +1,17 @@
+.nav-container{
+  background-color: #c5e0dc;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productos{  
+  color: #774f38;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.logo{
+    width: 4rem;
+}
