@@ -1,0 +1,37 @@
+.error-page {
+  height: 100vh;                /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* centra vertical */
+  align-items: center;          /* centra horizontal */
+  text-align: center;
+  gap: 20px;
+  color: #2d4739;
+  padding: 20px;
+}
+
+.error-img {
+  width: 550px;
+  max-width: 80%;
+  border-radius: 10rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-back {
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #cfe8d6;
+  color: #2d4739;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  background-color: #bfdcc7;
+}

@@ -1,0 +1,12 @@
+.btn-mas, .btn-menos, .btn-buy{
+  background-color: #774f38;
+  width: 100%;
+  padding: 10px;
+  color: #c5e0dc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
