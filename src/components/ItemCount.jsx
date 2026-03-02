@@ -33,7 +33,7 @@ const restar= ()=> {
   {/* <button className="btn btn-primary buy-btn" onClick={purchase}>
     Comprar
   </button> */}
-   <button className="btn-buy" onClick={()=>onAdd(count)}>
+   <button className="btn-buy" onClick={()=>onAdd(count)} disabled= {count === 0 || stock === 0}>
     Comprar
   </button>
 </div>

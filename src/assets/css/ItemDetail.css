@@ -1,8 +1,10 @@
 .item-detail img{
-    border-radius: 8rem;
+    border-radius: 6rem;
     height: 500px;
     min-width: 400px;
     margin: 2rem;
+    object-fit: cover;
+    width: 30%;
 }
 p{
     font-size: 25px;
@@ -14,4 +16,18 @@ p{
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.btn-ir{
+  background-color: #774f38;
+  width: 8rem;
+  padding: 10px;
+  color: #c5e0dc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  text-decoration: none;
 }

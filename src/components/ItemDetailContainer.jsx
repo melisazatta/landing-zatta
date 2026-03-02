@@ -3,20 +3,54 @@ import { getOneProduct } from "../mock/asyncMock"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 
+import Loader from "./Loader"
+
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../service/firebase"
+
+import { Link } from "react-router-dom"
+
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState({})
+    const [cargando, setCargando] = useState(true)
+    const [invalid, setInvalid] = useState(null)
 
     const { id } = useParams() 
 
     useEffect(() => {
-        getOneProduct(id)
-        .then((res) => setDetail(res))
-        .catch((err) => console.error(err))
+        const docRef = doc(db, "productos", id)
+        getDoc(docRef)
+         .then((res) => {
+            if(res.data()){
+                setDetail({id:res.id, ...res.data()})
+            }else{
+                setInvalid(true)
+            }
+         })
+         .catch((err) => console.error(err))
+         .finally(()=> setCargando(false))
     }, [id])
+
+    // useEffect(() => {
+    //     getOneProduct(id)
+    //     .then((res) => setDetail(res))
+    //     .catch((err) => console.error(err))
+    //     .finally(()=> setCargando(false))
+    // }, [id])
+
+    if(invalid){
+        return(
+            <div>
+                <h2>El producto no existe!</h2>
+                <Link to='/'>Volver a Home</Link>
+            </div>
+        )
+    }
 
     return (
         <div>
-            <ItemDetail detail = {detail} />
+            { cargando ? <Loader/> :  <ItemDetail detail = {detail} /> }
+           
         </div>
     )
 }

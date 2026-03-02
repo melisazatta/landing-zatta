@@ -1,4 +1,9 @@
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
+
 const CartWidget = () => {
+
+    const { cartQuantity, cart } = useContext(CartContext)
     return (
         <div>
             <svg
@@ -17,7 +22,17 @@ const CartWidget = () => {
   <circle cx="9" cy="20" r="1.5" />
   <circle cx="18" cy="20" r="1.5" />
 </svg>
-<span>2</span>
+{
+    cart.length> 0 && <span style={{
+    color: "#c5e0dc",
+    backgroundColor: "#774f38",
+    padding: "2px 6px",
+    borderRadius: "12px",
+    fontWeight: "bold",
+    marginLeft: "1px"
+  }}>{cartQuantity()}</span>
+}
+
         </div>
     )
 }

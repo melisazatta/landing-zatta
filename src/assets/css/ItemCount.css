@@ -1,4 +1,4 @@
-.btn-mas, .btn-menos, .btn-buy{
+/* .btn-mas, .btn-menos, .btn-buy{
   background-color: #774f38;
   width: 100%;
   padding: 10px;
@@ -9,4 +9,46 @@
   font-size: 18px;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
+} */
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.counter-controls {
+  display: flex;
+  flex-direction: row;   /* 🔥 Esto hace que estén a lo ancho */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;             /* Espacio entre botones y número */
+}
+
+.btn-menos,
+.btn-mas {
+  padding: 8px 15px;
+  font-size: 20px;
+  border: none;
+  background-color: #774f38;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.8rem;
+}
+
+.counter-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-buy {
+  padding: 10px 20px;
+  background-color: #774f38;
+  color: #c5e0dc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
 }
