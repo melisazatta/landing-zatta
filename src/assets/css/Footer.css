@@ -1,7 +1,7 @@
 .footer {
   background-color: #774f38;
   padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 16rem;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -23,6 +23,7 @@
   justify-content: center;
   gap: 2rem;
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .footer-links a {
@@ -37,7 +38,7 @@
 }
 
 .footer-copy {
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.8;
   color: #c5e0dc;
 }

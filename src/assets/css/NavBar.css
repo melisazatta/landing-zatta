@@ -4,7 +4,7 @@
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 
 }
 
@@ -12,8 +12,17 @@
   color: #774f38;
   text-decoration: none;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 .logo{
     width: 4rem;
+}
+.dropdown-menu{
+  background-color: #ece5ce;
+  color: #774f38;
+}
+.navbar .nav-link.dropdown-toggle,
+.navbar .nav-link.dropdown-toggle.active,
+.navbar .show > .nav-link.dropdown-toggle {
+  color: #774f38;
 }

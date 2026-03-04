@@ -1,16 +1,31 @@
-# React + Vite
+# Landing Zatta App 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue realizado para la entrega final del curso de React con JS en Coderhouse.
 
-Currently, two official plugins are available:
+![app](/public/readme.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instalación ⚙️
 
-## React Compiler
+1. Clonar el repositorio.
+2. Moverse a la carpeta creada con el comando `cd landing-zatta`
+3. Ejecutar el comando `npm install` para instalar dependecias y crear la carpeta `node_modules`.
+4. Ejecutar el comando `npm run dev` para levantar la app en un entorno local.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+>Es necesario contar con Node v24.12.0 instalado
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Version Host 💻
+
+Para ver el proyecto online, puede ingresar al siguiente link: [Coder App](https://coder-flex-81680.vercel.app/)
+
+
+### Librerias utilizadas 📖 
+
+<!-- - [React Bootstrap](https://react-bootstrap.netlify.app): utilizada para el styling de la app.
+- [React Icons](https://react-bootstrap.netlify.app): librería de iconos. -->
+- [React Router Dom](https://reactrouter.com/): utilizada para implementar la navegación por rutas.
+- [Firebase](https://firebase.google.com/): utilizada como base datos.
+
+
+
+Desarrollado por Melisa 🤭
