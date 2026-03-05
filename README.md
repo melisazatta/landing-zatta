@@ -1,3 +1,4 @@
+
 # Landing Zatta App 🛒
 
 Este proyecto fue realizado para la entrega final del curso de React con JS en Coderhouse.
@@ -7,6 +8,7 @@ Este proyecto fue realizado para la entrega final del curso de React con JS en C
 Landing Zatta es una tienda online de productos de dietética desarrollada con React.  
 Permite visualizar productos, filtrarlos por categoría, agregarlos al carrito y finalizar la compra generando una orden almacenada en Firebase.
 
+## 📸 Captura
 ![app](/public/readme.png)
 
 ## ✨ Funcionalidades
@@ -19,7 +21,7 @@ Permite visualizar productos, filtrarlos por categoría, agregarlos al carrito y
 - Generación de orden de compra
 - Guardado de órdenes en Firebase
 
-##Tecnologías
+## 🛠 Tecnologías
 
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Firebase](https://img.shields.io/badge/Firebase-Firestore-orange)
@@ -29,7 +31,7 @@ Permite visualizar productos, filtrarlos por categoría, agregarlos al carrito y
 
 1. Clonar el repositorio.
 
->git clone https://github.com/melisazatta/landing-zatta.git
+`git clone https://github.com/melisazatta/landing-zatta.git`
 
 2. Moverse a la carpeta creada con el comando `cd landing-zatta`
 3. Ejecutar el comando `npm install` para instalar dependecias y crear la carpeta `node_modules`.
@@ -51,4 +53,4 @@ Podés ver el proyecto online en el siguiente link: [Landing-zatta](https://land
 
 
 
-Desarrollado por Melisa 🤭
+Desarrollado por Melisa 🌸
