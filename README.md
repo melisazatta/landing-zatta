@@ -16,7 +16,7 @@ Este proyecto fue realizado para la entrega final del curso de React con JS en C
 
 ### Version Host 💻
 
-Para ver el proyecto online, puede ingresar al siguiente link: [Coder App](https://coder-flex-81680.vercel.app/)
+Para ver el proyecto online, puede ingresar al siguiente link: [Coder App](https://landing-zatta.vercel.app/)
 
 
 ### Librerias utilizadas 📖 
