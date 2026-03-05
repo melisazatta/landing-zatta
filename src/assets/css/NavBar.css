@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-
 }
 
 .productos{  
@@ -17,7 +16,7 @@
 .logo{
     width: 4rem;
     transform: scaleX(-1);
-}
+  }
 .dropdown-menu{
   background-color: #ece5ce;
   color: #774f38;

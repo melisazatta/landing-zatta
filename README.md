@@ -49,7 +49,8 @@ Podés ver el proyecto online en el siguiente link: [Landing-zatta](https://land
 
 - [React Bootstrap](https://react-bootstrap.netlify.app): utilizada para el styling de la app.
 - [React Router Dom](https://reactrouter.com/): utilizada para implementar la navegación por rutas.
-- [Firebase](https://firebase.google.com/): utilizada como base datos.
+- [Firebase](https://firebase.google.com/): utilizada como base de datos.
+- [SweetAlert2](https://sweetalert2.github.io/): utilizada para mostrar alertas customizadas al usuario.
 
 
 

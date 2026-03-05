@@ -4,6 +4,8 @@ import { CartContext } from "../context/CartContext"
 import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 
+import Swal from 'sweetalert2'
+
 
 const ItemDetail = ({detail}) => {
     const {addItem} = useContext(CartContext)
@@ -12,6 +14,15 @@ const ItemDetail = ({detail}) => {
     const onAdd = (cantidad) => {
         addItem(detail, cantidad)
         SetPurchase(true)
+
+        Swal.fire({
+            title: "Producto agregado",
+            text: "El producto se agregó al carrito",
+            icon: "success",
+            confirmButtonColor: "#774f38",
+            background: "#ece5ce",
+            color: '#774f38'
+        })
     }
 
     return (

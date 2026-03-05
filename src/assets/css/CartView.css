@@ -102,11 +102,13 @@
         grid-row: span 2;
         font-weight: bold;
         font-size: 18px;
+        color: #774f38;
     }
 
     .cart-price,
     .cart-qty{
         font-size: 18px;
+        color: #774f38;
     }
 
     .cart-subtotal{
@@ -134,6 +136,8 @@
     .carrito-footer span{
         font-size: 1.5rem;
         padding-bottom: 1rem;
+        color: #774f38;
+        font-weight: bold;
     }
 
 }
