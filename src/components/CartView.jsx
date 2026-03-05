@@ -54,20 +54,20 @@ const CartView = () => {
 
         <tbody>
             {cart.map((compra) => (
-                <tr key={compra.id}>
-                    <td>
+                <tr key={compra.id} className="cart-item">
+                    <td className="cart-img">
                         <img src={compra.img} alt={compra.name} width="60" />
                     </td>
 
-                    <td>{compra.name}</td>
+                    <td className="cart-name">{compra.name}</td>
 
-                    <td>${compra.price}</td>
+                    <td className="cart-price">${compra.price}</td>
 
-                    <td>{compra.quantity}</td>
+                    <td className="cart-qty">{compra.quantity}</td>
 
-                    <td>${compra.price * compra.quantity}</td>
+                    <td  className="cart-subtotal">${compra.price * compra.quantity}</td>
 
-                    <td>
+                    <td className="cart-actions">
                         <button className="btn" onClick={() => removeItem(compra.id)}>
                             X
                         </button>

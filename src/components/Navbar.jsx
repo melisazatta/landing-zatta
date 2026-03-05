@@ -36,7 +36,7 @@ const NavBar = () => {
           <img className='logo' src={'../favicon.png'} alt="logo-frutilla" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="mx-auto">
            
             <NavDropdown  className="productos" title="Productos" id="basic-nav-dropdown">
               <NavDropdown.Item  className="productos" as={NavLink} to='/category/frutos secos'>Frutos secos</NavDropdown.Item>
@@ -53,9 +53,11 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
 
-           <NavLink to="/cart"> <CartWidget/> </NavLink>
+           
 
         </Navbar.Collapse>
+
+        <NavLink to="/cart"> <CartWidget/> </NavLink>
       </Container>
     </Navbar>
     )    

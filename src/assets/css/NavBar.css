@@ -26,3 +26,22 @@
 .navbar .show > .nav-link.dropdown-toggle {
   color: #774f38;
 }
+
+/* Mobile */
+@media (max-width: 991px){
+
+  .navbar-collapse{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .navbar-nav{
+    align-items: center;
+  }
+
+}

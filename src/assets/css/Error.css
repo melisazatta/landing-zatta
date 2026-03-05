@@ -1,13 +1,13 @@
 .error-page {
-  height: 100vh;                /* ocupa toda la pantalla */
+  height: 70vh;               
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* centra vertical */
-  align-items: center;          /* centra horizontal */
+  justify-content: center;      
+  align-items: center;
   text-align: center;
   gap: 20px;
   color: #2d4739;
-  padding: 20px;
+  padding-top: 8rem;
 }
 
 .error-img {
