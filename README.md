@@ -21,8 +21,7 @@ Para ver el proyecto online, puede ingresar al siguiente link: [Coder App](https
 
 ### Librerias utilizadas 📖 
 
-<!-- - [React Bootstrap](https://react-bootstrap.netlify.app): utilizada para el styling de la app.
-- [React Icons](https://react-bootstrap.netlify.app): librería de iconos. -->
+- [React Bootstrap](https://react-bootstrap.netlify.app): utilizada para el styling de la app.
 - [React Router Dom](https://reactrouter.com/): utilizada para implementar la navegación por rutas.
 - [Firebase](https://firebase.google.com/): utilizada como base datos.
 
