@@ -16,6 +16,7 @@
 }
 .logo{
     width: 4rem;
+    transform: scaleX(-1);
 }
 .dropdown-menu{
   background-color: #ece5ce;

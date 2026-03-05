@@ -67,7 +67,7 @@ const Checkout = () => {
                     <div>
                         <h2 className="text-center m-5">Muchas gracias por tu compra!</h2>
 
-                         <img src={Compraok} alt="Compra ok"  className="compra-ok d-block mx-auto" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
+                         <img src={Compraok} alt="Compra ok"  className="compra-ok img-fluid d-block mx-auto p-3" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
 
                         <h3 className="text-center m-5">Tu orden es: {orderId}</h3>
                         
