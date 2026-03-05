@@ -36,7 +36,7 @@ const CartView = () => {
 //             </div>
 //         </div>
 
-<div>
+<div className="fade-in">
     <h1>Tu carrito</h1>
 
     <div className="carrito-table-wrapper">

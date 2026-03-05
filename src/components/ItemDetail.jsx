@@ -15,7 +15,7 @@ const ItemDetail = ({detail}) => {
     }
 
     return (
-        <div className="item-detail">
+        <div className="item-detail fade-in">
             <h1> Detalle: {detail.name}</h1>   
             <img src={detail.img} alt={detail.name} />  
             <p>{detail.description}</p>
