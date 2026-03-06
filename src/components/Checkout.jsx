@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp, updateDoc, doc } from "firebase/firestore";
 import EmptyCart from "./EmptyCart";
 import { db } from "../service/firebase";
 
@@ -14,7 +14,7 @@ import Compraok from "../assets/compra-ok.png"
 const Checkout = () => {
     const [buyer, setBuyer] = useState({})
     const [secondMail, setSecondMail] = useState('')
-    const { cart, total, clear } = useContext(CartContext)
+    const { cart, total, clearCart } = useContext(CartContext)
     const [orderId, setOrderId] = useState('')
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -48,9 +48,15 @@ const Checkout = () => {
             const orderCollection = collection(db, "orders")
 
             addDoc(orderCollection, order)
-                .then((res) => {
+                .then(async(res) => {
+                    for (const prod of cart){
+                        const productRef = doc(db, "productos", prod.id)
+                        await updateDoc(productRef, {
+                            stock: prod.stock - prod.quantity
+                        })
+                    }
                     setOrderId(res.id)
-                    clear()
+                    clearCart()
                 }).catch((error) => console.log(error))
                 .finally(() => setLoading(false))
         }
@@ -67,7 +73,7 @@ const Checkout = () => {
                     <div>
                         <h2 className="text-center m-5">Muchas gracias por tu compra!</h2>
 
-                         <img src={Compraok} alt="Compra ok"  className="compra-ok img-fluid d-block mx-auto p-3" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
+                         <img src={Compraok} alt="Compra realizada con éxito"  className="compra-ok img-fluid d-block mx-auto p-3" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
 
                         <h3 className="text-center m-5">Tu orden es: {orderId}</h3>
                         

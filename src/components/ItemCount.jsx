@@ -5,7 +5,7 @@ const ItemCount = ({stock, onAdd})=> {
 const [count, setCount]= useState(1)
 
 const sumar = ()=> {
-    if(count < stock){
+    if(count < 50){
         setCount(count + 1)
     }
 }

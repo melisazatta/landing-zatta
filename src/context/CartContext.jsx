@@ -16,20 +16,47 @@ export const CartProvider = ({children}) => {
     },[cart])
 
     const addItem = (item, qty) => {
-        if(isInCart(item.id)){
-        setCart(cart.map((prod)=> {
-          if(prod.id === item.id){
-        return {
-            ...prod, quantity: prod.quantity + qty
-        }
-    }else {
-        return prod
-    }
-    }))        
-     }else{
+        
+        const itemInCart = cart.find(prod => prod.id === item.id)
+
+        if(itemInCart){
+
+            const newQuantity = itemInCart.quantity + qty
+            const stockRestante = item.stock - itemInCart.quantity
+
+            if(newQuantity > item.stock){
+
+                const mensaje = stockRestante === 0
+            ? "Este producto ya no tiene más stock." : stockRestante === 1 ?
+            "Solo queda 1 unidad disponible."
+            : `Solo quedan ${stockRestante} unidades.`
+
+                 Swal.fire({
+                icon: "warning",
+                title: "Stock insuficiente",
+                text: mensaje,
+                background: "#ece5ce",
+                confirmButtonColor: "#774f38"
+            })
+            return false
+            }
+
+        setCart(cart.map(prod=>
+          prod.id === item.id?
+         {
+            ...prod, quantity: newQuantity
+        } : prod
+    ))    
+    return true
+
+     }    
             setCart([...cart, {...item, quantity:qty}])
-       }
+            return true
+       
     }
+    const clearCart = () => {
+    setCart([])
+}
 
     const clear = () => {
         Swal.fire({
@@ -44,7 +71,7 @@ export const CartProvider = ({children}) => {
     cancelButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
-      setCart([])
+      clearCart()
       Swal.fire({
         title: "Carrito vacío",
         icon: "success",
@@ -55,6 +82,7 @@ export const CartProvider = ({children}) => {
   })
         
     }
+
 
     const removeItem = (id) => {
         setCart(cart.filter((prod)=> prod.id !== id))
@@ -69,7 +97,7 @@ export const CartProvider = ({children}) => {
     }
 
     const isInCart = (id) => {
-        return cart.some((prod)=> prod.id === id)
+        return cart.find((prod)=> prod.id === id)
     }
 
     const total = () => {
@@ -81,7 +109,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cart, addItem, clear, removeItem, isInCart, total, cartQuantity}}>
+        <CartContext.Provider value={{cart, addItem, clear, clearCart, removeItem, isInCart, total, cartQuantity}}>
             {children}
         </CartContext.Provider>
     )
