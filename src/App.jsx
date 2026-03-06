@@ -16,6 +16,8 @@ import { CartProvider } from './context/CartContext'
 import Checkout from './components/Checkout'
 import Footer from './components/Footer'
 
+import Contacto from './components/Contacto';
+
 function App() {
 
   return (
@@ -38,6 +40,8 @@ function App() {
       <Route path='/cart' element={<CartContainer/>}></Route>
       
       <Route path='/checkout' element= {<Checkout/>}></Route>
+
+       <Route path='/contacto' element= {<Contacto/>}></Route>
 
       <Route path='*' element= {<Error/>}></Route>
 
