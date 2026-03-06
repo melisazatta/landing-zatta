@@ -30,12 +30,11 @@ const NavBar = () => {
         
     //    </nav> 
        
-     <Navbar expand="lg" className=" nav-container">
+     <Navbar className=" nav-container">
       <Container>
         <Navbar.Brand as={NavLink} to='/'>
           <img className='logo' src={'../favicon.png'} alt="logo-frutilla" /></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+      
           <Nav className="mx-auto">
            
             <NavDropdown  className="productos" title="Productos" id="basic-nav-dropdown">
@@ -55,7 +54,7 @@ const NavBar = () => {
 
            
 
-        </Navbar.Collapse>
+      
 
         <NavLink to="/cart" className="text-decoration-none"> <CartWidget/> </NavLink>
       </Container>

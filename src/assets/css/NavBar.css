@@ -1,7 +1,7 @@
 .nav-container{
   background-color: #c5e0dc;
   display: flex;
-  padding: 2rem;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -20,11 +20,26 @@
 .dropdown-menu{
   background-color: #ece5ce;
   color: #774f38;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: dropdownFade 0.2s ease;
 }
 .navbar .nav-link.dropdown-toggle,
 .navbar .nav-link.dropdown-toggle.active,
 .navbar .show > .nav-link.dropdown-toggle {
   color: #774f38;
+}
+
+@keyframes dropdownFade{
+  from{
+    opacity:0;
+    transform: translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
 }
 
 /* Mobile */
