@@ -6,7 +6,7 @@ const EmptyCart = () => {
     return (
         <div>
             <h1>Tu carrito está vacío!</h1>
-            <h2 className="text-center px-3">Te invitamos a ver nuestros productos</h2>
+            <h2 className="text-center px-3" style={{color: "#774f38"}}>Te invitamos a ver nuestros productos</h2>
 
              <img 
                     src={Carrovacio} 

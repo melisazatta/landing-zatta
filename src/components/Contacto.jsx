@@ -35,6 +35,15 @@ const Contacto = () => {
      setError('Por favor complete todos los datos.')
     return
   }
+  if (consulta.name.length < 3) {
+  setError("El nombre debe tener al menos 3 caracteres.")
+  return
+  }
+  if (consulta.lastname.length < 2) {
+  setError("El apellido debe tener al menos 2 caracteres.")
+  return
+  }
+
     try {
         setLoading(true)
 
@@ -58,15 +67,20 @@ const Contacto = () => {
         message:""
       })
 
-    } catch (error) {
-        console.log(error)
-    }
+    } catch(error){
+      Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "No se pudo enviar la consulta"
+})
+}
+    
     setLoading(false)
 }
 
   return (
     <div className='m-5 text-center  min-vh-70'>
-        <h2 className='mb-4'>Contacto</h2>
+        <h2 className='mb-4' style={{color: "#774f38"}}>Contacto</h2>
 
         {error && <p style={{color: "red", fontWeight: "bold"}}>{error}</p>}
 
@@ -88,7 +102,7 @@ const Contacto = () => {
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>
-                <h3>Consulta</h3>
+                <h3 style={{color: "#774f38"}}>Consulta</h3>
                 </Form.Label>
             <Form.Control as="textarea" rows={3} name="message" value={consulta.message}
             onChange={consultaData} />
