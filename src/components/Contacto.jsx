@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import Button from "react-bootstrap/Button";
 
@@ -16,7 +16,6 @@ const Contacto = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
-    
 
     const consultaData = (e) => {
         setConsulta(
@@ -26,7 +25,6 @@ const Contacto = () => {
             }
         )
         setError(null)
-
     }
 
    const enviarConsulta = async (e) => {
@@ -37,7 +35,6 @@ const Contacto = () => {
      setError('Por favor complete todos los datos.')
     return
   }
-
     try {
         setLoading(true)
 

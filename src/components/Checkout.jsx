@@ -51,30 +51,27 @@ const Checkout = () => {
     }
     return (
         <>
-
             {
-                orderId ?
-                    <div>
-                        <h2 className="text-center m-5">Muchas gracias por tu compra!</h2>
+             orderId ?
+                 <div>
+                     <h2 className="text-center m-5">Muchas gracias por tu compra!</h2>
 
-                         <img src={Compraok} alt="Compra realizada con éxito"  className="compra-ok img-fluid d-block mx-auto p-3" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
+                     <img src={Compraok} alt="Compra realizada con éxito"  className="compra-ok img-fluid d-block mx-auto p-3" style={{width: "550px",height: "auto",borderRadius: "10rem",backgroundColor: "transparent"}}/>
 
-                        <h3 className="text-center m-5">Tu orden es: {orderId}</h3>
+                    <h3 className="text-center m-5">Tu orden es: {orderId}</h3>
 
-                         <div className="d-flex justify-content-center">
-                            <Link className="btn" to='/'>Volver al Home</Link>
-                            </div>
+                     <div className="d-flex justify-content-center">
+                         <Link className="btn" to='/'>Volver al Home</Link>
+                     </div>
                     </div>
-
                     :
                     <div>
-
                         <h1>Complete sus datos</h1>
 
                         <Form className="form m-5" onSubmit={handleSubmit(terminarCompra)}>
 
-                            <Form.Group className="mb-3">
-                                <Form.Control type="text" name="name" placeholder="Ingrese su nombre" {...register('name', {required: true, minLength: 3})}/>
+                         <Form.Group className="mb-3">
+                            <Form.Control type="text" name="name" placeholder="Ingrese su nombre" {...register('name', {required: true, minLength: 3})}/>
                                  {errors?.name?.type === "required" && <small style={{color: 'red'}}>Debe ingresar un nombre.</small>}
                                  {errors?.name?.type === "minLength" && <small style={{color: 'red'}}>El nombre debe contener mínimo 3 caracteres.</small>}
                             </Form.Group>

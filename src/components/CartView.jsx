@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 import '../assets/css/CartView.css'
@@ -8,33 +8,6 @@ import { Link } from "react-router-dom";
 const CartView = () => {
     const {cart, removeItem, clear, total} = useContext(CartContext)
     return (
-//         <div>
-//             <h1>Tu carrito </h1>
-
-//             <div>
-//                 {
-//                 cart.map((compra)=> (
-//                     <div key={compra.id}>
-//                             <img src={compra.img} alt={compra.name}></img>
-
-//                             <span>{compra.name}</span>
-
-//                              <span>${compra.price}</span>
-
-//                               <span>Cantidad: {compra.quantity}</span>
-
-//                                <span>Precio final: ${compra.price*compra.quantity}</span>
-
-//                                <button className="btn" onClick={() => removeItem (compra.id)}>X</button>
-//                         </div>
-//                 ))
-//                 }
-// {/*Funcion FALTA*/}
-//                 <span>Total a pagar: $</span>
-//                 <button onClick={clear}>Vaciar carrito</button>
-//                 <button>Terminar compra</button>
-//             </div>
-//         </div>
 
 <div className="fade-in pb-4">
     <h1>Tu carrito</h1>

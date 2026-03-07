@@ -1,4 +1,3 @@
-import React from 'react'
 import '../assets/css/Footer.css'
 import { Link } from 'react-router-dom';
 

@@ -31,9 +31,7 @@ function App() {
     <Routes>
       <Route path='/' element={  <ItemListContainer mensaje='Bienvenidos a la Diete-'/> }></Route>
 
-       <Route path='/category/:type' element={  <ItemListContainer 
-      //  mensaje='Categoría: '
-       /> }></Route>
+       <Route path='/category/:type' element={  <ItemListContainer /> }></Route>
 
       <Route path='/item/:id' element={   <ItemDetailContainer/> }></Route>
 
