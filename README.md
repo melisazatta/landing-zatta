@@ -51,6 +51,7 @@ Podés ver el proyecto online en el siguiente link: [Landing-zatta](https://land
 - [React Router Dom](https://reactrouter.com/): utilizada para implementar la navegación por rutas.
 - [Firebase](https://firebase.google.com/): utilizada como base de datos.
 - [SweetAlert2](https://sweetalert2.github.io/): utilizada para mostrar alertas customizadas al usuario.
+- [React Hook Form](https://react-hook-form.com/): utilizada para gestionar y validar el formulario.
 
 
 
