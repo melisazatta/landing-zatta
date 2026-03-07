@@ -14,8 +14,8 @@
   font-size: 1.9rem;
 }
 .logo{
-    width: 4rem;
-    transform: scaleX(-1);
+    width: 6rem;
+    border-radius: 1rem;
   }
 .dropdown-menu{
   background-color: #ece5ce;

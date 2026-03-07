@@ -14,7 +14,7 @@ const NavBar = () => {
      <Navbar className=" nav-container">
       <Container>
         <Navbar.Brand as={NavLink} to='/'>
-          <img className='logo' src={'../favicon.png'} alt="logo-frutilla" /></Navbar.Brand>
+          <img className='logo' src={'../logo.png'} alt="logo de la Dietética" /></Navbar.Brand>
       
           <Nav className="mx-auto">
            

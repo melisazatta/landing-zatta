@@ -29,7 +29,7 @@ function App() {
     <NavBar/>
 
     <Routes>
-      <Route path='/' element={  <ItemListContainer mensaje='Bienvenidos a la Diete-'/> }></Route>
+      <Route path='/' element={  <ItemListContainer mensaje='Bienvenidos a la Diete~'/> }></Route>
 
        <Route path='/category/:type' element={  <ItemListContainer /> }></Route>
 
