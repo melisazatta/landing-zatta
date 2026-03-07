@@ -55,7 +55,7 @@ const CartView = () => {
     <div className="carrito-footer">
         <span>
             <strong>Total a pagar:</strong> $ {total()}
-            {/* {cart.reduce((acc, item) => acc + item.price * item.quantity, 0)} */}
+          
         </span>
 
         <button className="btn" onClick={clear}>Vaciar carrito</button>

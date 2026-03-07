@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { getOneProduct } from "../mock/asyncMock"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 
@@ -31,13 +30,6 @@ const ItemDetailContainer = () => {
          .finally(()=> setCargando(false))
     }, [id])
 
-    // useEffect(() => {
-    //     getOneProduct(id)
-    //     .then((res) => setDetail(res))
-    //     .catch((err) => console.error(err))
-    //     .finally(()=> setCargando(false))
-    // }, [id])
-
     if(invalid){
         return(
             <div>
@@ -46,7 +38,6 @@ const ItemDetailContainer = () => {
             </div>
         )
     }
-
     return (
         <div>
             { cargando ? <Loader/> :  <ItemDetail detail = {detail} /> }

@@ -3,33 +3,14 @@ import CartWidget from './CartWidget'
 
 import { NavLink } from 'react-router-dom'
 
-import { useContext } from 'react'
-import { CartContext } from '../context/CartContext'
-
 import { Navbar } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const NavBar = () => {
-    const {cart} =useContext(CartContext)
     return (
-    //    <nav className="nav-container">
-
-    //     <NavLink to= '/'> 
-    //     <img className='logo' src={'../favicon.png'} alt="logo-frutilla" />
-    //     </NavLink>
-       
-        
-    //     <NavLink className="productos" to="/category/frutos secos">Frutos Secos</NavLink>
-    //     <NavLink className="productos" to="/category/congelados">Congelados</NavLink>
-    //     <NavLink className="productos" to="/category/semillas">Semillas</NavLink>
-    //     <NavLink className="productos" to="/category/infusiones">Infusiones</NavLink>
-
-    //     <NavLink to="/cart"> <CartWidget/> </NavLink>
-        
-    //    </nav> 
-       
+   
      <Navbar className=" nav-container">
       <Container>
         <Navbar.Brand as={NavLink} to='/'>
@@ -51,10 +32,6 @@ const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-
-           
-
-      
 
         <NavLink to="/cart" className="text-decoration-none"> <CartWidget/> </NavLink>
       </Container>
