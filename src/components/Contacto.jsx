@@ -32,7 +32,7 @@ const Contacto = () => {
 
 
   if(!consulta.name || !consulta.lastname || !consulta.email || !consulta.message){
-     setError('Por favor complete todos los datos.')
+     setError('Por favor complete todos los campos.')
     return
   }
   if (consulta.name.length < 3) {
